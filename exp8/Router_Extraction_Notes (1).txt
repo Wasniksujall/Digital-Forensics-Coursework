@@ -1,0 +1,48 @@
+ROUTER EXTRACTION NOTES
+Case: Operation Karza Jaal — Experiment 8
+Exhibit: Sitabuldi_Router_20251219.pcap
+
+--------------------------------------------------------------
+DEVICE INFORMATION
+--------------------------------------------------------------
+Device:              TP-Link Archer C6 (floor router, Sitabuldi premises)
+Seized:               10-Jan-2026 (day of raid)
+Extraction Method:    Attached USB storage — router had been logging its
+                       own traffic continuously for several weeks prior
+                       to seizure; nobody on the floor appears to have
+                       been aware of this.
+Capture Window Used:  19-Dec-2025, 08:00–17:15 IST (single working day,
+                       selected for full-day coverage during this
+                       examination)
+
+--------------------------------------------------------------
+INTERNAL NETWORK LAYOUT (from router's own DHCP lease table)
+--------------------------------------------------------------
+IP Address        MAC Address          Hostname (from DHCP)
+----------------  -------------------  ---------------------
+192.168.1.13       aa:bb:cc:00:00:13    SITABULDI-PC03
+192.168.1.17       aa:bb:cc:00:00:17    SITABULDI-PC07
+192.168.1.11       (unresolved)         —
+192.168.1.15       (unresolved)         —
+192.168.1.21       (unresolved)         —
+192.168.1.22       (unresolved)         —
+192.168.1.1         aa:bb:cc:00:00:01    (router — gateway)
+192.168.1.5         —                    floor-nas.local (local file server)
+
+--------------------------------------------------------------
+EXAMINER NOTES
+--------------------------------------------------------------
+- This capture spans one working day. Most traffic is unremarkable
+  background activity (search, webmail, video, update checks).
+- Wireshark's time display defaults to UTC. Set it to the local
+  capture time zone (Asia/Kolkata, UTC+5:30) before correlating any
+  timestamp against other exhibits in this case, or your times will
+  be off by 5 hours 30 minutes.
+- Do not assume the busiest conversation by byte count is the most
+  significant one. Sort and filter by more than one criterion before
+  concluding anything.
+- SSH traffic in this capture is encrypted after the initial banner
+  exchange. The banner identifies the software in use; it does not
+  reveal what was done in the session.
+- One request in this capture is unencrypted. It was not flagged for
+  you - if you find it, note where and record what it contains.

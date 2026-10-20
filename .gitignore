@@ -1,0 +1,30 @@
+# Node.js (used for PDF conversion scripts - not part of coursework)
+node_modules/
+package-lock.json
+package.json
+*.msi
+
+# Python conversion scripts (internal tooling)
+convert.py
+convert_docx.py
+print_pdf.js
+make_report.py
+
+# Intermediate / duplicate conversion artifacts
+*.html
+Email_Forensics_Report.md
+
+# Large binary forensic evidence files (too large for GitHub)
+exp6/Vikrant-Sable-Laptop-RAM.raw
+exp6/vikrant-pc-6.8.12.json
+exp6/vikrant-pc-6.8.12.json.xz
+
+# Backup / duplicate report copies
+exp7/Assignment_7.7_Mobile_Device_Forensics_Report.docx
+exp8/EXPERIMENT*8*Examination*Report.docx
+exp9/Experiment9_Forensic_Report_Backup.docx
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
